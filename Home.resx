@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -208,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -235,7 +235,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -265,7 +265,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="cellsHeigh.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 210</value>
@@ -286,7 +286,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cellsHeigh.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="cellsWidth.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 259</value>
@@ -307,7 +307,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cellsWidth.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -334,7 +334,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -364,73 +364,52 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 305</value>
-  </data>
-  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
-    <value>numericUpDown1</value>
+  <data name="Xini.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 300</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
+  <data name="Xini.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="Xini.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;Xini.Name" xml:space="preserve">
+    <value>Xini</value>
+  </data>
+  <data name="&gt;&gt;Xini.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Xini.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;Xini.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
-  <data name="numericUpDown2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 347</value>
-  </data>
-  <data name="numericUpDown2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="numericUpDown2.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.Name" xml:space="preserve">
-    <value>numericUpDown2</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Continue.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="continueButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>474, 329</value>
   </data>
-  <data name="Continue.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="continueButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 32</value>
   </data>
-  <data name="Continue.TabIndex" type="System.Int32, mscorlib">
+  <data name="continueButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="Continue.Text" xml:space="preserve">
+  <data name="continueButton.Text" xml:space="preserve">
     <value>Continuar</value>
   </data>
-  <data name="&gt;&gt;Continue.Name" xml:space="preserve">
-    <value>Continue</value>
+  <data name="&gt;&gt;continueButton.Name" xml:space="preserve">
+    <value>continueButton</value>
   </data>
-  <data name="&gt;&gt;Continue.Type" xml:space="preserve">
+  <data name="&gt;&gt;continueButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Continue.Parent" xml:space="preserve">
+  <data name="&gt;&gt;continueButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Continue.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;continueButton.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="Exit.Location" type="System.Drawing.Point, System.Drawing">
     <value>619, 329</value>
@@ -454,7 +433,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="RandomObs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +460,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RandomObs.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -508,29 +487,95 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
-  <data name="numberOfObstacles.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="numberOfObs.Location" type="System.Drawing.Point, System.Drawing">
     <value>619, 216</value>
   </data>
-  <data name="numberOfObstacles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="numberOfObs.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 20</value>
   </data>
-  <data name="numberOfObstacles.TabIndex" type="System.Int32, mscorlib">
+  <data name="numberOfObs.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;numberOfObstacles.Name" xml:space="preserve">
-    <value>numberOfObstacles</value>
+  <data name="&gt;&gt;numberOfObs.Name" xml:space="preserve">
+    <value>numberOfObs</value>
   </data>
-  <data name="&gt;&gt;numberOfObstacles.Type" xml:space="preserve">
+  <data name="&gt;&gt;numberOfObs.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numberOfObstacles.Parent" xml:space="preserve">
+  <data name="&gt;&gt;numberOfObs.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;numberOfObstacles.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;numberOfObs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Xfin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 347</value>
+  </data>
+  <data name="Xfin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="Xfin.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Xfin.Name" xml:space="preserve">
+    <value>Xfin</value>
+  </data>
+  <data name="&gt;&gt;Xfin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Xfin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Xfin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Yfin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 347</value>
+  </data>
+  <data name="Yfin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="Yfin.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;Yfin.Name" xml:space="preserve">
+    <value>Yfin</value>
+  </data>
+  <data name="&gt;&gt;Yfin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Yfin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Yfin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Yini.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 300</value>
+  </data>
+  <data name="Yini.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="Yini.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;Yini.Name" xml:space="preserve">
+    <value>Yini</value>
+  </data>
+  <data name="&gt;&gt;Yini.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Yini.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Yini.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -548,6 +593,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Home</value>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,26 +39,31 @@
             this.cellsWidth = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.Continue = new System.Windows.Forms.Button();
+            this.Xini = new System.Windows.Forms.NumericUpDown();
+            this.continueButton = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.RandomObs = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.numberOfObstacles = new System.Windows.Forms.NumericUpDown();
+            this.numberOfObs = new System.Windows.Forms.NumericUpDown();
+            this.Xfin = new System.Windows.Forms.NumericUpDown();
+            this.Yfin = new System.Windows.Forms.NumericUpDown();
+            this.Yini = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellsHeigh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellsWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numberOfObstacles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Xini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberOfObs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Xfin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Yfin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Yini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -80,7 +86,6 @@
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cellsHeigh
             // 
@@ -101,6 +106,7 @@
             0,
             0,
             0});
+            this.cellsHeigh.ValueChanged += new System.EventHandler(this.cellsHeigh_ValueChanged);
             // 
             // cellsWidth
             // 
@@ -121,6 +127,7 @@
             0,
             0,
             0});
+            this.cellsWidth.ValueChanged += new System.EventHandler(this.cellsWidth_ValueChanged);
             // 
             // label5
             // 
@@ -132,57 +139,78 @@
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
-            // numericUpDown1
+            // Xini
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.Name = "numericUpDown1";
+            resources.ApplyResources(this.Xini, "Xini");
+            this.Xini.Name = "Xini";
+            this.Xini.ValueChanged += new System.EventHandler(this.Xini_ValueChanged);
             // 
-            // numericUpDown2
+            // continueButton
             // 
-            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
-            this.numericUpDown2.Name = "numericUpDown2";
-            // 
-            // Continue
-            // 
-            resources.ApplyResources(this.Continue, "Continue");
-            this.Continue.Name = "Continue";
-            this.Continue.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.continueButton, "continueButton");
+            this.continueButton.Name = "continueButton";
+            this.continueButton.UseVisualStyleBackColor = true;
             // 
             // Exit
             // 
             resources.ApplyResources(this.Exit, "Exit");
             this.Exit.Name = "Exit";
             this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // RandomObs
             // 
             resources.ApplyResources(this.RandomObs, "RandomObs");
             this.RandomObs.Name = "RandomObs";
             this.RandomObs.UseVisualStyleBackColor = true;
-            this.RandomObs.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
-            // numberOfObstacles
+            // numberOfObs
             // 
-            resources.ApplyResources(this.numberOfObstacles, "numberOfObstacles");
-            this.numberOfObstacles.Name = "numberOfObstacles";
+            resources.ApplyResources(this.numberOfObs, "numberOfObs");
+            this.numberOfObs.Name = "numberOfObs";
+            this.numberOfObs.ValueChanged += new System.EventHandler(this.numberOfObs_ValueChanged);
+            // 
+            // Xfin
+            // 
+            resources.ApplyResources(this.Xfin, "Xfin");
+            this.Xfin.Name = "Xfin";
+            this.Xfin.ValueChanged += new System.EventHandler(this.Xfin_ValueChanged);
+            // 
+            // Yfin
+            // 
+            resources.ApplyResources(this.Yfin, "Yfin");
+            this.Yfin.Name = "Yfin";
+            this.Yfin.ValueChanged += new System.EventHandler(this.Yfin_ValueChanged);
+            // 
+            // Yini
+            // 
+            resources.ApplyResources(this.Yini, "Yini");
+            this.Yini.Name = "Yini";
+            this.Yini.ValueChanged += new System.EventHandler(this.Yini_ValueChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.numberOfObstacles);
+            this.Controls.Add(this.Yini);
+            this.Controls.Add(this.Yfin);
+            this.Controls.Add(this.Xfin);
+            this.Controls.Add(this.numberOfObs);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.RandomObs);
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.Continue);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.continueButton);
+            this.Controls.Add(this.Xini);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cellsWidth);
@@ -195,12 +223,16 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellsHeigh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellsWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numberOfObstacles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Xini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberOfObs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Xfin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Yfin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Yini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,13 +249,16 @@
         private System.Windows.Forms.NumericUpDown cellsWidth;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button Continue;
+        private System.Windows.Forms.NumericUpDown Xini;
+        private System.Windows.Forms.Button continueButton;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.CheckBox RandomObs;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numberOfObstacles;
+        private System.Windows.Forms.NumericUpDown numberOfObs;
+        private System.Windows.Forms.NumericUpDown Xfin;
+        private System.Windows.Forms.NumericUpDown Yfin;
+        private System.Windows.Forms.NumericUpDown Yini;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
