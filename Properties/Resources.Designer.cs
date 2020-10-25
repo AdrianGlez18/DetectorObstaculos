@@ -73,6 +73,26 @@ namespace P1_IA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cuad {
+            get {
+                object obj = ResourceManager.GetObject("Cuad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha {
+            get {
+                object obj = ResourceManager.GetObject("flecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Model_S_white_background_2_2 {
             get {
                 object obj = ResourceManager.GetObject("Model-S-white-background-2-2", resourceCulture);

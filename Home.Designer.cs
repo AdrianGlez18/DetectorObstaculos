@@ -150,6 +150,7 @@
             resources.ApplyResources(this.continueButton, "continueButton");
             this.continueButton.Name = "continueButton";
             this.continueButton.UseVisualStyleBackColor = true;
+            this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
             // 
             // Exit
             // 

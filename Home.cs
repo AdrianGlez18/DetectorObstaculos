@@ -19,10 +19,12 @@ namespace P1_IA
 
         private void Home_Load(object sender, EventArgs e)
         {
-            continueButton.Enabled = false;
+            continueButton.Enabled = true;
             /*
              * continueManager();
              */
+            /*using (Result tmp = new Result())
+                tmp.ShowDialog();*/
 
         }
 
@@ -83,6 +85,7 @@ namespace P1_IA
             setWidthInCells((int)cellsWidth.Value);
             Console.WriteLine("CellsWidth cambió a " + widthInCells);
         }
+
         private void Xini_ValueChanged(object sender, EventArgs e)
         {
             setInitialX((int)Xini.Value);
@@ -113,6 +116,13 @@ namespace P1_IA
         {
             this.Close();
         }
+
+        private void continueButton_Click(object sender, EventArgs e)
+        {
+            using (Result tmp = new Result(heightInCells, widthInCells, initialX, initialY, finalX, finalY, numberOfObstacles))
+                tmp.ShowDialog();
+        }
+
 
         #endregion
 

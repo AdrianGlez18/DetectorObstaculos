@@ -11,3 +11,4 @@ D:\Code\IA\P1_IA\obj\Debug\es-ES\P1_IA.resources.dll
 D:\Code\IA\P1_IA\obj\Debug\P1_IA.exe
 D:\Code\IA\P1_IA\obj\Debug\P1_IA.pdb
 D:\Code\IA\P1_IA\obj\Debug\P1_IA.csproj.CoreCompileInputs.cache
+D:\Code\IA\P1_IA\obj\Debug\P1_IA.Result.resources
