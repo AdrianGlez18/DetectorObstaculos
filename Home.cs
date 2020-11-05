@@ -28,11 +28,6 @@ namespace P1_IA
 
         }
 
-        private void continueManager()
-        {
-            errorProvider1.SetError(cellsHeigh, "Tmp");
-        }
-
         #region Inicializacion y cambios en la configuración de parámetros
 
         //Declaración de variables necesarias para la toma de datos del programa
@@ -123,6 +118,15 @@ namespace P1_IA
                 tmp.ShowDialog();
         }
 
+
+        #endregion
+
+        #region Control de errores
+
+        private void continueManager()
+        {
+            errorProvider1.SetError(cellsHeigh, "Tmp");
+        }
 
         #endregion
 

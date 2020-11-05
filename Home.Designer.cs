@@ -91,7 +91,7 @@
             // 
             resources.ApplyResources(this.cellsHeigh, "cellsHeigh");
             this.cellsHeigh.Maximum = new decimal(new int[] {
-            80,
+            500,
             0,
             0,
             0});
@@ -112,7 +112,7 @@
             // 
             resources.ApplyResources(this.cellsWidth, "cellsWidth");
             this.cellsWidth.Maximum = new decimal(new int[] {
-            80,
+            500,
             0,
             0,
             0});
