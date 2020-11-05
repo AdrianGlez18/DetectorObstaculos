@@ -11,15 +11,16 @@ namespace P1_IA
         //Declaración de variables necesarias para la toma de datos del programa
         private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
         private bool isRandom = true;
+        private String obs;
         private int[,] _table = new int[500, 500];
-        private int[,] _obstacles = new int[100, 2];
+        //private int[,] _obstacles = new int[100, 2];
 
         public Simulator()
         {
 
         }
         
-        public void initialize(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true)
+        public void initialize(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true, String _obs = "")
         {
             heightInCells = _heightInCells;
             widthInCells = _widthInCells;
@@ -29,6 +30,7 @@ namespace P1_IA
             finalY = _finalY;
             numberOfObstacles = _numberOfObstacles;
             isRandom = _isRandom;
+            obs = _obs;
         }
 
         public string startProcessing()
@@ -74,10 +76,6 @@ namespace P1_IA
             _table[initialX, initialY] = 2;
             _table[finalX, finalY] = 3;
             errCode = processObstacles();
-            /*_table[0, 1] = 5;
-            _table[0, 2] = 6;
-            _table[4, 0] = 1;
-            _table[2, 2] = 1;*/
             return errCode;
         }
 
@@ -97,6 +95,25 @@ namespace P1_IA
                     }
                     else i--;
                 }
+            }
+            else
+            {
+                obstacleStringToTable();
+            }
+            return 0;
+        }
+
+        private int obstacleStringToTable()
+        {
+            String[] obsPairs = obs.Split(';');
+            String[] tmpObstacleSelector;
+            int tmpx, tmpy;
+            for (int i = 0; i < numberOfObstacles; i++)
+            {
+                tmpObstacleSelector = obsPairs[i].Split(',');
+                tmpx = int.Parse(tmpObstacleSelector[0]);
+                tmpy = int.Parse(tmpObstacleSelector[1]);
+                _table[tmpx, tmpy] = 1;
             }
             return 0;
         }

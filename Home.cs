@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,6 +34,7 @@ namespace P1_IA
         //Declaración de variables necesarias para la toma de datos del programa
         private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
         private bool isRandom = false;
+        private string _obs = "Home.cs";
 
         //Getters y Setters
         public void setHeightInCells(int newValue)
@@ -120,8 +122,20 @@ namespace P1_IA
 
         private void continueButton_Click(object sender, EventArgs e)
         {
-            using (Result tmp = new Result(heightInCells, widthInCells, initialX, initialY, finalX, finalY, numberOfObstacles, isRandom))
-                tmp.ShowDialog();
+            if(!isRandom && numberOfObstacles != 0)
+            {
+                ObstacleSelector tmpo = new ObstacleSelector(numberOfObstacles);
+                    //tmpo.ShowDialog();
+                //obs = tmpo.Value;
+                if (tmpo.ShowDialog() == DialogResult.OK)
+                {
+                    _obs = tmpo.obs; //lee la propiedad
+                    //Console.WriteLine("Sale correctamente");
+                    //Console.WriteLine(_obs);
+                }
+            }
+            using (Result tmp = new Result(heightInCells, widthInCells, initialX, initialY, finalX, finalY, numberOfObstacles, isRandom, _obs))
+                tmp.ShowDialog();          
         }
 
 

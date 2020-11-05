@@ -20,7 +20,7 @@ namespace P1_IA
         private int[,] _obstacles = new int[100, 2];*/
         private Simulator _simulator = new Simulator();
 
-        public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true)
+        public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true, String _obs = "")
         {
             /*heightInCells = _heightInCells;
             widthInCells = _widthInCells;
@@ -30,7 +30,7 @@ namespace P1_IA
             finalY = _finalY;
             numberOfObstacles = _numberOfObstacles;
             isRandom = _isRandom;*/
-            _simulator.initialize(_heightInCells, _widthInCells, _initialX, _initialY, _finalX, _finalY, _numberOfObstacles,  _isRandom);
+            _simulator.initialize(_heightInCells, _widthInCells, _initialX, _initialY, _finalX, _finalY, _numberOfObstacles,  _isRandom, _obs);
             InitializeComponent();
         }
 
@@ -51,7 +51,6 @@ namespace P1_IA
                 _obstacles[numberOfObstacles, 1] = 0;
             }*/
             //int errorChecker = generateTable();
-            //this.printResultLabel.ForeColor = Color.White;
             this.printResultLabel.Text = _simulator.startProcessing();
         }
 
