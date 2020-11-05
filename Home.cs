@@ -89,6 +89,12 @@ namespace P1_IA
         {
             setInitialY((int)Yini.Value);
         }
+
+        private void RandomObs_CheckedChanged(object sender, EventArgs e)
+        {
+            isRandom = !isRandom;
+        }
+
         private void Xfin_ValueChanged(object sender, EventArgs e)
         {
             setFinalX((int)Xfin.Value);
@@ -114,7 +120,7 @@ namespace P1_IA
 
         private void continueButton_Click(object sender, EventArgs e)
         {
-            using (Result tmp = new Result(heightInCells, widthInCells, initialX, initialY, finalX, finalY, numberOfObstacles))
+            using (Result tmp = new Result(heightInCells, widthInCells, initialX, initialY, finalX, finalY, numberOfObstacles, isRandom))
                 tmp.ShowDialog();
         }
 

@@ -164,6 +164,7 @@
             resources.ApplyResources(this.RandomObs, "RandomObs");
             this.RandomObs.Name = "RandomObs";
             this.RandomObs.UseVisualStyleBackColor = true;
+            this.RandomObs.CheckedChanged += new System.EventHandler(this.RandomObs_CheckedChanged);
             // 
             // label7
             // 

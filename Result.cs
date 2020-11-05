@@ -15,11 +15,12 @@ namespace P1_IA
     {
         //Declaración de variables necesarias para la toma de datos del programa
         private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
-        private bool isRandom = false;
+        private bool isRandom = true;
         private int[,] _table = new int [500, 500];
+        private int[,] _obstacles = new int[100, 2];
         //private List<List<int>> _table;
 
-        public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0)
+        public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true)
         {
             heightInCells = _heightInCells;
             widthInCells = _widthInCells;
@@ -28,6 +29,7 @@ namespace P1_IA
             finalX = _finalX;
             finalY = _finalY;
             numberOfObstacles = _numberOfObstacles;
+            isRandom = _isRandom;
             InitializeComponent();
         }
 
@@ -35,12 +37,17 @@ namespace P1_IA
         {
             //Al cargar la ventana de resultados, se llama a una función que retorna una string. Este método genera la interfaz
             //gráfica del recorrido óptimo del vehículo de forma dinámica en base a los parámetros ingresados por el usuario.
-            for (int i = 0; i < heightInCells; i++)
+            /*for (int i = 0; i < heightInCells; i++)
             {
-                for (int j = 0; j < widthInCells + 2; j++)
+                for (int j = 0; j < widthInCells; j++)
                 {
                     _table[i, j] = 0;
                 }
+            }*/
+            for (int i = 0; i < numberOfObstacles; i++)
+            {
+                _obstacles[numberOfObstacles, 0] = 0;
+                _obstacles[numberOfObstacles, 1] = 0;
             }
             int errorChecker = generateTable();
             //this.printResultLabel.ForeColor = Color.White;
@@ -78,13 +85,34 @@ namespace P1_IA
 
         private int generateTable()
         {
-
+            int errCode = 0;
             _table[initialX, initialY] = 2;
             _table[finalX, finalY] = 3;
-            _table[0, 1] = 5;
+            errCode = processObstacles();
+            /*_table[0, 1] = 5;
             _table[0, 2] = 6;
             _table[4, 0] = 1;
-            _table[2, 2] = 1;
+            _table[2, 2] = 1;*/
+            return errCode;
+        }
+
+        private int processObstacles()
+        {
+            Random rnd = new Random();
+            int randX, randY;
+            if (isRandom)
+            {
+                for (int i = 0; i < numberOfObstacles; i++)
+                {
+                    randX = rnd.Next(heightInCells);
+                    randY = rnd.Next(widthInCells);
+                    if (_table[randX, randY] == 0)
+                    {
+                        _table[randX, randY] = 1;
+                    }
+                    else i--;
+                }
+            }
             return 0;
         }
 
