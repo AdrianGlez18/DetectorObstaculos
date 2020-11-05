@@ -14,22 +14,23 @@ namespace P1_IA
     public partial class Result : Form
     {
         //Declaración de variables necesarias para la toma de datos del programa
-        private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
+        /*private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
         private bool isRandom = true;
         private int[,] _table = new int [500, 500];
-        private int[,] _obstacles = new int[100, 2];
-        //private List<List<int>> _table;
+        private int[,] _obstacles = new int[100, 2];*/
+        private Simulator _simulator = new Simulator();
 
         public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true)
         {
-            heightInCells = _heightInCells;
+            /*heightInCells = _heightInCells;
             widthInCells = _widthInCells;
             initialX = _initialX;
             initialY = _initialY;
             finalX = _finalX;
             finalY = _finalY;
             numberOfObstacles = _numberOfObstacles;
-            isRandom = _isRandom;
+            isRandom = _isRandom;*/
+            _simulator.initialize(_heightInCells, _widthInCells, _initialX, _initialY, _finalX, _finalY, _numberOfObstacles,  _isRandom);
             InitializeComponent();
         }
 
@@ -44,17 +45,17 @@ namespace P1_IA
                     _table[i, j] = 0;
                 }
             }*/
-            for (int i = 0; i < numberOfObstacles; i++)
+            /*for (int i = 0; i < numberOfObstacles; i++)
             {
                 _obstacles[numberOfObstacles, 0] = 0;
                 _obstacles[numberOfObstacles, 1] = 0;
-            }
-            int errorChecker = generateTable();
+            }*/
+            //int errorChecker = generateTable();
             //this.printResultLabel.ForeColor = Color.White;
-            this.printResultLabel.Text = generateResult();
+            this.printResultLabel.Text = _simulator.startProcessing();
         }
 
-        private String generateResult()
+        /*private String generateResult()
         {
             String finalString = "";
             for(int i = 0; i < heightInCells; i++)  //Se deja una casilla libre que no se imprime ni evalua para evitar problemas en las comparaciones
@@ -76,7 +77,7 @@ namespace P1_IA
                     /*if (i == initialY && j == initialX) finalString += "▤";
                     else if (i == finalY && j == finalX) finalString += "▥";
                     else finalString += "▢";
-                    // ▼►▶◄◀▲https://en.wikipedia.org/wiki/Geometric_Shapes */
+                    // ▼►▶◄◀▲https://en.wikipedia.org/wiki/Geometric_Shapes 
                 }
                 finalString += "\n";
             }
@@ -92,7 +93,7 @@ namespace P1_IA
             /*_table[0, 1] = 5;
             _table[0, 2] = 6;
             _table[4, 0] = 1;
-            _table[2, 2] = 1;*/
+            _table[2, 2] = 1;/////
             return errCode;
         }
 
@@ -115,7 +116,7 @@ namespace P1_IA
             }
             return 0;
         }
-
+*/
     }
 
     //Enum utilizado para generar una simplificacion del procesamiento de la tabla, pudiendo tratar

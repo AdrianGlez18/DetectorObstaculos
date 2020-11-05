@@ -75,6 +75,7 @@
     <Compile Include="Result.Designer.cs">
       <DependentUpon>Result.cs</DependentUpon>
     </Compile>
+    <Compile Include="Simulator.cs" />
     <EmbeddedResource Include="Home.es-ES.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
