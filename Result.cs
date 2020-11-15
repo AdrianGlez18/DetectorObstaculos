@@ -48,16 +48,12 @@ namespace P1_IA
                 _obstacles[numberOfObstacles, 1] = 0;
             }*/
             //int errorChecker = generateTable();
-<<<<<<< Updated upstream
-            this.printResultLabel.Text = _simulator.startProcessing();
-=======
            /* this.printResultLabel.Text = "Generando...";
             String tmpsrt = _simulator.startProcessing();
             this.printResultLabel.Text = tmpsrt;*/
             this.resultTextBox.Text = "Generando...";
             String tmpsrt = _simulator.startProcessing();
             this.resultTextBox.Text = tmpsrt; 
->>>>>>> Stashed changes
         }
 
         /*private String generateResult()

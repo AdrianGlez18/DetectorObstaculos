@@ -180,14 +180,11 @@
             // numberOfObs
             // 
             resources.ApplyResources(this.numberOfObs, "numberOfObs");
-<<<<<<< Updated upstream
-=======
             this.numberOfObs.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
->>>>>>> Stashed changes
             this.numberOfObs.Name = "numberOfObs";
             this.numberOfObs.ValueChanged += new System.EventHandler(this.numberOfObs_ValueChanged);
             // 

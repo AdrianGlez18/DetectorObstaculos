@@ -11,30 +11,16 @@ namespace P1_IA
     {
         //Declaración de variables necesarias para la toma de datos del programa
         private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
-<<<<<<< Updated upstream
-        private bool isRandom = true;
-        private String obs;
-        private int[,] _table = new int[500, 500];
-        //private int[,] _obstacles = new int[100, 2];
-=======
         private bool isRandom = true, isManhattan;
         private String obs;
         private int[,] _table;
         private int[,] _visited; 
 
->>>>>>> Stashed changes
-
         public Simulator()
         {
 
         }
-<<<<<<< Updated upstream
-        
-        public void initialize(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true, String _obs = "")
-=======
-
         public void initialize(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true, String _obs = "", bool heur = false)
->>>>>>> Stashed changes
         {
             heightInCells = _heightInCells;
             widthInCells = _widthInCells;
@@ -60,11 +46,8 @@ namespace P1_IA
 
         private String generateResult()
         {
-<<<<<<< Updated upstream
-=======
             int tmperrcode = Ax2();
             int k = 0;
->>>>>>> Stashed changes
             String finalString = "";
             for (int i = 0; i < heightInCells; i++)
             {
@@ -80,18 +63,12 @@ namespace P1_IA
                         case 5: finalString += "▢"; break;
                         default: break;
                     }
-                    /*if (i == initialY && j == initialX) finalString += "▤";
-                    else if (i == finalY && j == finalX) finalString += "▥";
-                    else finalString += "▢";
-                    // ▼►▶◄◀▲https://en.wikipedia.org/wiki/Geometric_Shapes */
                 }
                 finalString += "\n";
             }
             return finalString;
         }
 
-<<<<<<< Updated upstream
-=======
         public int Ax2()
         {
             /////////////////// UTILIZADOS UNICAMENTE PARA LA EVALUACION EXPERIMENTAL/////////////
@@ -263,7 +240,6 @@ namespace P1_IA
         }
 
 
->>>>>>> Stashed changes
         private int generateTable()
         {
             int errCode = 0;
@@ -312,4 +288,5 @@ namespace P1_IA
             return 0;
         }
     }
+    #endregion
 }
