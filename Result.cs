@@ -13,14 +13,10 @@ namespace P1_IA
 {
     public partial class Result : Form
     {
-        //Declaración de variables necesarias para la toma de datos del programa
-        /*private int heightInCells = 2, widthInCells = 2, initialX = 0, initialY = 0, finalX = 0, finalY = 0, numberOfObstacles = 0;
-        private bool isRandom = true;
-        private int[,] _table = new int [500, 500];
-        private int[,] _obstacles = new int[100, 2];*/
         private Simulator _simulator = new Simulator();
+        private int fullSize = 0;
 
-        public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true, String _obs = "")
+        public Result(int _heightInCells = 2, int _widthInCells = 2, int _initialX = 0, int _initialY = 0, int _finalX = 0, int _finalY = 0, int _numberOfObstacles = 0, bool _isRandom = true, String _obs = "", bool heur = false)
         {
             /*heightInCells = _heightInCells;
             widthInCells = _widthInCells;
@@ -30,7 +26,8 @@ namespace P1_IA
             finalY = _finalY;
             numberOfObstacles = _numberOfObstacles;
             isRandom = _isRandom;*/
-            _simulator.initialize(_heightInCells, _widthInCells, _initialX, _initialY, _finalX, _finalY, _numberOfObstacles,  _isRandom, _obs);
+            fullSize = _heightInCells * _widthInCells;
+            _simulator.initialize(_heightInCells, _widthInCells, _initialX, _initialY, _finalX, _finalY, _numberOfObstacles,  _isRandom, _obs, heur);
             InitializeComponent();
         }
 
@@ -51,7 +48,16 @@ namespace P1_IA
                 _obstacles[numberOfObstacles, 1] = 0;
             }*/
             //int errorChecker = generateTable();
+<<<<<<< Updated upstream
             this.printResultLabel.Text = _simulator.startProcessing();
+=======
+           /* this.printResultLabel.Text = "Generando...";
+            String tmpsrt = _simulator.startProcessing();
+            this.printResultLabel.Text = tmpsrt;*/
+            this.resultTextBox.Text = "Generando...";
+            String tmpsrt = _simulator.startProcessing();
+            this.resultTextBox.Text = tmpsrt; 
+>>>>>>> Stashed changes
         }
 
         /*private String generateResult()

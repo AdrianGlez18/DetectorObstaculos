@@ -49,6 +49,7 @@
             this.Yfin = new System.Windows.Forms.NumericUpDown();
             this.Yini = new System.Windows.Forms.NumericUpDown();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellsHeigh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cellsWidth)).BeginInit();
@@ -91,7 +92,7 @@
             // 
             resources.ApplyResources(this.cellsHeigh, "cellsHeigh");
             this.cellsHeigh.Maximum = new decimal(new int[] {
-            500,
+            100000,
             0,
             0,
             0});
@@ -112,7 +113,7 @@
             // 
             resources.ApplyResources(this.cellsWidth, "cellsWidth");
             this.cellsWidth.Maximum = new decimal(new int[] {
-            500,
+            100000,
             0,
             0,
             0});
@@ -142,6 +143,11 @@
             // Xini
             // 
             resources.ApplyResources(this.Xini, "Xini");
+            this.Xini.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.Xini.Name = "Xini";
             this.Xini.ValueChanged += new System.EventHandler(this.Xini_ValueChanged);
             // 
@@ -174,24 +180,47 @@
             // numberOfObs
             // 
             resources.ApplyResources(this.numberOfObs, "numberOfObs");
+<<<<<<< Updated upstream
+=======
+            this.numberOfObs.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+>>>>>>> Stashed changes
             this.numberOfObs.Name = "numberOfObs";
             this.numberOfObs.ValueChanged += new System.EventHandler(this.numberOfObs_ValueChanged);
             // 
             // Xfin
             // 
             resources.ApplyResources(this.Xfin, "Xfin");
+            this.Xfin.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.Xfin.Name = "Xfin";
             this.Xfin.ValueChanged += new System.EventHandler(this.Xfin_ValueChanged);
             // 
             // Yfin
             // 
             resources.ApplyResources(this.Yfin, "Yfin");
+            this.Yfin.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.Yfin.Name = "Yfin";
             this.Yfin.ValueChanged += new System.EventHandler(this.Yfin_ValueChanged);
             // 
             // Yini
             // 
             resources.ApplyResources(this.Yini, "Yini");
+            this.Yini.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.Yini.Name = "Yini";
             this.Yini.ValueChanged += new System.EventHandler(this.Yini_ValueChanged);
             // 
@@ -199,11 +228,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Yini);
             this.Controls.Add(this.Yfin);
             this.Controls.Add(this.Xfin);
@@ -261,6 +298,7 @@
         private System.Windows.Forms.NumericUpDown Yfin;
         private System.Windows.Forms.NumericUpDown Yini;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
