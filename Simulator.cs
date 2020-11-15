@@ -49,6 +49,10 @@ namespace P1_IA
             int tmperrcode = Ax2();
             int k = 0;
             String finalString = "";
+            if(tmperrcode == 1)
+            {
+                return ("El problema no tiene solución");
+            }
             for (int i = 0; i < heightInCells; i++)
             {
                 for (int j = 0; j < widthInCells; j++)
@@ -96,7 +100,7 @@ namespace P1_IA
                 _visited[posX, posY]++;
                 if (posY > 0)
                 {
-                    if (_table[posX, posY - 1] != 1 && _table[posX, posY - 1] != 6)
+                    if (_table[posX, posY - 1] != 1 && _table[posX, posY - 1] != 6 && _visited[posX, posY - 1] <4)
                     {
                         if(posX != tmpParent.getX() || posY -1 != tmpParent.getY())
                         {
@@ -111,7 +115,7 @@ namespace P1_IA
 
                 if (posX < widthInCells)
                 {
-                    if (_table[posX + 1, posY] != 1 && _table[posX + 1, posY] != 6)
+                    if (_table[posX + 1, posY] != 1 && _table[posX + 1, posY] != 6 && _visited[posX + 1, posY] < 4)
                     {
                         if (posX + 1 != tmpParent.getX() || posY != tmpParent.getY())
                         {
@@ -125,7 +129,7 @@ namespace P1_IA
                 }
                 if (posY < heightInCells)
                 {
-                    if (_table[posX, posY + 1] != 1 && _table[posX, posY + 1] != 6)
+                    if (_table[posX, posY + 1] != 1 && _table[posX, posY + 1] != 6 && _visited[posX, posY + 1] < 4)
                     {
                         if (posX != tmpParent.getX() || posY + 1 != tmpParent.getY())
                         {
@@ -139,7 +143,7 @@ namespace P1_IA
                 }
                 if (posX > 0)
                 {
-                    if (_table[posX - 1, posY] != 1 && _table[posX - 1, posY] != 6)
+                    if (_table[posX - 1, posY] != 1 && _table[posX - 1, posY] != 6 && _visited[posX - 1, posY] < 4)
                     {
                         if (posX - 1 != tmpParent.getX() || posY != tmpParent.getY())
                         {
@@ -154,12 +158,18 @@ namespace P1_IA
                 currentDistance += 1;
                 if (nodeIndex == 0)
                 {
-                    if (deLoop != 0)
+                    /*if (deLoop != 0)
                     {
                         tmpNode = tmpNode.parent;
                         _table[tmpNode.getX(), tmpNode.getY()] = 6;
-                    }
-                    else { return 1; }
+                    }*/
+                    //else { return 1; }
+
+                    ///////////////////////EXPERIMENTAL//////////////////////////////////////
+                    timeMeasure.Stop();
+                    Console.WriteLine($"Tiempo: {timeMeasure.Elapsed.TotalMilliseconds} ms");
+                    /////////////////////////////////////////////////////////////////////////
+                    return 1;
                 }
 
                 deLoop = 0;

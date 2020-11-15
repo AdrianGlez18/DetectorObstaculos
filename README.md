@@ -1,6 +1,7 @@
 # DetectorObstaculos
 
 ## Autor: Adrián González Hernández
+## Enlace del repositorio: https://github.com/AdrianGlez18/DetectorObstaculos
 ### signatura: Inteligencia Artificial
 ### Lenguaje: C#
 ### Herramientas: .NET Framework, Visual Studio
