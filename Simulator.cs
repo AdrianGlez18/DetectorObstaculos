@@ -61,6 +61,7 @@ namespace P1_IA
                         case 3: finalString += "✹"; break;
                         case 4: finalString += "▣"; break;
                         case 5: finalString += "▢"; break;
+                        case 6: finalString += "▢"; break;
                         default: break;
                     }
                 }
@@ -85,6 +86,7 @@ namespace P1_IA
                 heuristica[i] = 9999999999.9;
             }
             List<NodeA> nodeList = new List<NodeA>();
+            List<NodeA> fullList = new List<NodeA>();
             NodeA tmpNode = head;
             NodeA tmpParent = head;
             while (true)
@@ -94,7 +96,7 @@ namespace P1_IA
                 _visited[posX, posY]++;
                 if (posY > 0)
                 {
-                    if (_table[posX, posY - 1] != 1 && _visited[posX, posY - 1] < 4)
+                    if (_table[posX, posY - 1] != 1 && _table[posX, posY - 1] != 6)
                     {
                         if(posX != tmpParent.getX() || posY -1 != tmpParent.getY())
                         {
@@ -104,18 +106,12 @@ namespace P1_IA
                             nodosExpandidos++;
                         }
                         else { deLoop = 1; }
-                        /*if (_table[posX, posY - 1] == 4)
-                        {
-                            _visited[posX, posY - 1]++;
-                        }*/
-                        //nodeIndex++;
-                        //nodosExpandidos++;
                     }
                 }
 
                 if (posX < widthInCells)
                 {
-                    if (_table[posX + 1, posY] != 1 && _visited[posX + 1, posY] < 10)
+                    if (_table[posX + 1, posY] != 1 && _table[posX + 1, posY] != 6)
                     {
                         if (posX + 1 != tmpParent.getX() || posY != tmpParent.getY())
                         {
@@ -125,17 +121,11 @@ namespace P1_IA
                             nodosExpandidos++;
                         }
                         else { deLoop = 2; }
-                        /*if (_table[posX + 1, posY] == 4)
-                        {
-                            _visited[posX + 1, posY]++;
-                        }*/
-                        //nodeIndex++;
-                        //nodosExpandidos++;
                     }
                 }
                 if (posY < heightInCells)
                 {
-                    if (_table[posX, posY + 1] != 1 && _visited[posX, posY + 1] < 10)
+                    if (_table[posX, posY + 1] != 1 && _table[posX, posY + 1] != 6)
                     {
                         if (posX != tmpParent.getX() || posY + 1 != tmpParent.getY())
                         {
@@ -145,18 +135,11 @@ namespace P1_IA
                             nodosExpandidos++;
                         }
                         else { deLoop = 3; }
-                        /*if (_table[posX, posY + 1] == 4)
-                        {
-                            _visited[posX, posY + 1]++;
-                        }*/
-                        //nodeIndex++;
-                        //nodosExpandidos++;
-
                     }
                 }
                 if (posX > 0)
                 {
-                    if (_table[posX - 1, posY] != 1 && _visited[posX - 1, posY] < 10)
+                    if (_table[posX - 1, posY] != 1 && _table[posX - 1, posY] != 6)
                     {
                         if (posX - 1 != tmpParent.getX() || posY != tmpParent.getY())
                         {
@@ -166,22 +149,17 @@ namespace P1_IA
                             nodosExpandidos++;
                         }
                         else { deLoop = 4; }
-                        /*if (_table[posX - 1, posY] == 4)
-                        {
-                            _visited[posX - 1, posY]++;
-                        }*/
-                        //nodeIndex++;
-                        //nodosExpandidos++;
                     }
                 }
                 currentDistance += 1;
                 if (nodeIndex == 0)
                 {
-                    /*if(deLoop != 0)
+                    if (deLoop != 0)
                     {
-
-                    }*/
-                    return 0;
+                        tmpNode = tmpNode.parent;
+                        _table[tmpNode.getX(), tmpNode.getY()] = 6;
+                    }
+                    else { return 1; }
                 }
 
                 deLoop = 0;
